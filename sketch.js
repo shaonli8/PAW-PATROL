@@ -13,10 +13,7 @@ var y=200;
 var score=0;
 var rescue=0;
 
-gamestate=0
-
 function preload(){
-    backImg=loadImage("backImg4.png");
     poolImg=loadImage("pool.jpeg");
     poolImg2=loadImage("pool2.png");
     slideImg=loadImage("slide.png");
@@ -66,7 +63,8 @@ function draw(){
     if(score===21){
         textSize(40)
         fill("black")
-        text("RESCUED!!!",300,200)  
+        text("RESCUED!!!",300,200) 
+        Body.setStatic(pawPetrol.body,true) 
     }
     if(child.body.position.y>550){
         textSize(40)
